@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<!-- Menu Area -->
+<div *ngIf="menuService.showMainMenu">
+  <div class="col-xs-12 medIts-tiles-container">
+    <div
+      class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1 thumbnail medIts-tile medIts-tile-large">
+      <a href="#" routerLink="/project" (click)="click()" id="projectData" class="tiles" >
+        <span class="fa fa-files-o fa-5x" aria-hidden="true"></span>
+        <h3 class="tileTag">Project Management</h3>
+      </a>
+    </div>
+    <div
+      class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-2 thumbnail medIts-tile medIts-tile-large">
+      <a href="#" id="envConfig" class="tiles" onclick="goToEnvConfigPage();">
+        <span class="fa fa-globe fa-5x" aria-hidden="true"></span>
+        <h3 class="tileTag">Work-Flow Configuration</h3>
+      </a>
+    </div>
+
+    <div
+      class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1 thumbnail medIts-tile medIts-tile-large">
+      <a href="#" id="workFlow" class="tiles" onclick="goToWorkflowPage();">
+        <span class="fa fa-sliders fa-5x" aria-hidden="true"></span>
+        <h3 class="tileTag">DevOps Work-Flow</h3>
+      </a>
+    </div>
+    <div
+      class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-2 thumbnail medIts-tile medIts-tile-large">
+      <a href="#" id="fileHistory" class="tiles" onclick="goToWorkflowHistory();">
+        <span class="fa fa-history fa-5x" aria-hidden="true"></span>
+        <h3 class="tileTag">DevOps Reports</h3>
+      </a>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
